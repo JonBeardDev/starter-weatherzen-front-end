@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import { listObservations } from "../utils/api";
 import ErrorAlert from "../layout/ErrorAlert";
 
@@ -40,6 +41,11 @@ function Home() {
         <td>{observation.sky_condition}</td>
         {tempRow}
         <td>{observation.created_at}</td>
+        <td>
+          <Link to={`observations/${observation.observation_id}/edit`}>
+            <button className="btn btn-sm btn-secondary">&#9998;</button>
+          </Link>
+        </td>
       </tr>
     );
   });
@@ -57,6 +63,7 @@ function Home() {
             <th scope="col">Sky Conditions</th>
             <th scope="col">Air Temperature</th>
             <th scope="col">Created</th>
+            <th scope="col">Edit</th>
           </tr>
         </thead>
         <tbody>{tableRows}</tbody>
