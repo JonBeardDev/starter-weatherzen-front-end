@@ -29,7 +29,7 @@ function Home() {
 
     const tempRow = (
       <td>
-        {degCelsius.toFixed(2)} &deg;C / {degFahrenheit.toFixed(2)} &deg;F
+        {degCelsius.toFixed(0)} &deg;C / {degFahrenheit.toFixed(0)} &deg;F
       </td>
     );
 

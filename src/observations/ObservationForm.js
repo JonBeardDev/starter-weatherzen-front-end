@@ -15,7 +15,7 @@ function ObservationForm({ observation, changeHandler }) {
           type="number"
           max="107"
           min="-50"
-          step="0.01"
+          step="1"
           value={observation.air_temperature}
           onChange={changeHandler}
           required={true}
@@ -38,7 +38,7 @@ function ObservationForm({ observation, changeHandler }) {
           type="number"
           max="224"
           min="-60"
-          step="0.01"
+          step="1"
           value={observation.air_temperature}
           onChange={changeHandler}
           required={true}
@@ -61,7 +61,7 @@ function ObservationForm({ observation, changeHandler }) {
           type="number"
           max="224"
           min="-60"
-          step="0.01"
+          step="1"
           value={observation.air_temperature}
           onChange={changeHandler}
           required={true}
